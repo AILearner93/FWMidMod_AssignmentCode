@@ -1,4 +1,4 @@
-#Course notes iterative version
+#Course notes iterative version for assignment
 
 import sys
 import itertools
