@@ -1,5 +1,4 @@
 import sys
-import itertools
 
 NO_PATH = sys.maxsize
 graph = [[0, 7, NO_PATH, 8],
@@ -15,17 +14,18 @@ def FW_recursion(distance,int_Node=0):
 
     the function will then compute the minimum distance between two of the nodes
     """
-    #change this to find from graph but currently it works for code
-    distancenumber = 4
+    #get the length of the matrix, must be square for it to work.
+    distance_length =len(distance)
 
-    if distancenumber == int_Node:
+    if distance_length == int_Node:
+        print(distance)
         return distance
     else:
-        for start_node in range(distancenumber):
-            for end_node in range(distancenumber):
+        for start_node in range(distance_length):
+            for end_node in range(distance_length):
                 distance[start_node][end_node] = min(distance[start_node][end_node],
             distance[start_node][int_Node] + distance[int_Node][end_node] )
         int_Node+=1
         FW_recursion(distance,int_Node)
 
-FW_recursion(graph)
+MinDisGraph=FW_recursion(graph)
