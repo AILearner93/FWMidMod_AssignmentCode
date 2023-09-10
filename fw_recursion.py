@@ -14,18 +14,23 @@ def FW_recursion(distance,int_Node=0):
     distance_length =len(distance)
 
     for row in distance:
+        if len(distance) != len(row):
+            raise ValueError("Matrix is not square")
+
+    for row in distance:
         if not all(isinstance(elem, (int,float)) for elem in row) :
             raise TypeError("The elements in this graph need to be of type int or floats")
+    
+
 
 
 
     #get the length of the matrix, must be square for it to work
     if distance_length == int_Node:
         for i in range(distance_length):
-            for j in range(distance_length):
-                if distance [i][j] < 0:
-                    raise ValueError("Please ensure there are no negative weights in the graph")
-        print(distance)
+            if distance [i][i] < 0:
+                raise ValueError("This graph containes a negative cycle")
+        print (distance)
         return distance
     else:
         for i in range(distance_length):
@@ -36,9 +41,9 @@ def FW_recursion(distance,int_Node=0):
         return FW_recursion(distance,int_Node)
 
 initial_graph = [
-            [0, NO_PATH, NO_PATH],
-            [2, 0, 9],
-            [NO_PATH, 1, 0]
+    [0, 1, 1],
+    [NO_PATH, 0, 2],
+    [3, NO_PATH, 0]
 ]
 
 FW_recursion(initial_graph)

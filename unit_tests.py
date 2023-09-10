@@ -6,6 +6,7 @@ import sys
 NO_PATH = sys.maxsize
 
 class TestingFWRecursion(unittest.TestCase):
+
     def test_correctfunction(self):
          graph = [
             [0, 7, NO_PATH, 8],
@@ -15,15 +16,32 @@ class TestingFWRecursion(unittest.TestCase):
             ]
          known_min_graph = [
             [0, 7, 12, 8], 
-            [9223372036854775807, 0, 5, 7],
-            [9223372036854775807, 9223372036854775807, 0, 2], 
-            [9223372036854775807, 9223372036854775807, 9223372036854775807, 0]
+            [NO_PATH, 0, 5, 7],
+            [NO_PATH, NO_PATH, 0, 2], 
+            [NO_PATH, NO_PATH, NO_PATH, 0]
             ]
          self.assertEqual(FW_recursion(graph),known_min_graph)
 
-    def test_correctfunction(self):
-        
+    def test_negativecycles(self):
+         graph = [
+            [-1, 1, NO_PATH, 1],
+            [NO_PATH, 0, -3, NO_PATH],
+            [NO_PATH, NO_PATH, 0, 2],
+            [NO_PATH, NO_PATH, NO_PATH, 0]
+            ]
+         with self.assertRaises(ValueError):
+            FW_recursion(graph)
 
+    def test_nonesquarematrix(self):
+        graph = [
+            [-1, 1, NO_PATH, 1],
+            [NO_PATH, 0, -3, NO_PATH],
+            [NO_PATH, NO_PATH, 0, 2],
+            [NO_PATH, NO_PATH, NO_PATH, 0,2]
+            ]
+        with self.assertRaises(ValueError):
+            FW_recursion(graph)
+        
 
     def test_inputtypes(self):
         graph = [
