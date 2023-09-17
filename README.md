@@ -16,6 +16,6 @@ Alternatively you can used
 ## Execution
 
 1) Ensure that you have Python 3.x.x installed on your system.
-2) Navigate to this file using your desired terminal or command prompts.
+2) Navigate to this file using your desired Commang Line Interface (CLI).
 3) To run the script use the folliwing command
 4) 
