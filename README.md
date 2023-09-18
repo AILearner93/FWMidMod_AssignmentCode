@@ -13,7 +13,7 @@ This script implements the Floyd-Warshall algorithm using recursion to find the 
   To install this project, follow the steps below:
 
 1. **Download the latest zip file from this repository**
-2. **Unzip the file into a desired location""
+2. **Unzip the file into a desired location**
 
   alternatively using git to clone the repositery.
 
@@ -21,7 +21,27 @@ This script implements the Floyd-Warshall algorithm using recursion to find the 
   git clone https://github.com/AILearner93/FWMidMod_AssignmentCode
   ```
 
-### Excecution
+## Execution
+
+Before you begin execution make sure you have python 3.X.X installed on your system.
+
+  ```sh
+  python3 --version
+  ```
+
+
+1. **Using your prefrreeerf command line interface (CLI) navigate to the directory where you unzipped or cloned the files from this repository.**
+2. **Install all the required packages for this application.**
+
+  ```sh
+  pip install -r requirements.txt
+  ```
+
+3. ** Run the fw_recursion script**
+
+  ```sh
+  python fw_recursion.py
+  ```
 
 ###Tests:
   To ensure that the script works correctly and handles edge cases well, you can create a series of tests including but not limited to the following:
