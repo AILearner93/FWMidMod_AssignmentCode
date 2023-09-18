@@ -4,18 +4,20 @@ Source code for the Floyd-Warshall algorithm, developed for the Mid Module Assig
 
 This 
 
+# FW Recursion Script
+
+This script implements the Floyd-Warshall algorithm using recursion to find the shortest paths in a weighted graph with positive or negative edge weights (but no negative cycles).
+
 ## Installing
 
-To install this project 
+To install this project, follow the steps below:
 
-1) Download the latest zip file from this repository.
-2) Unzip the downloaded file into the desired location.
+1. **Download the latest zip file from this repository**
+2. **Unzip the file into a desired location""
 
-Alternatively you can used
+alternatively using git to clone the repositery.
 
-## Execution
+```sh
+git clone https://github.com/AILearner93/FWMidMod_AssignmentCode
+```
 
-1) Ensure that you have Python 3.x.x installed on your system.
-2) Navigate to this file using your desired Commang Line Interface (CLI).
-3) To run the script use the folliwing command
-4) 
