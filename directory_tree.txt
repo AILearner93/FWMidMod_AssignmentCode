@@ -1,0 +1,9 @@
+project_root/
+├── .coverage
+├── directory_tree.txt
+├── fw_iteritive.py
+├── fw_recursion.py
+├── performance_tests.py
+├── README.md
+├── requirements.txt
+└── unit_tests.py
