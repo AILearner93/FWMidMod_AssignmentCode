@@ -4,10 +4,6 @@ Source code for the Floyd-Warshall algorithm, developed for the Mid Module Assig
 
 The script implements the Floyd-Warshall algorithm, a dynamic programming solution to find the shortest paths between all pairs of vertices in a weighted directed graph. The algorithm is implemented through a recursive function that iteratively updates a distance matrix until the shortest paths between all pairs of nodes are found or until it detects a negative cycle in the graph. 
 
-# FW Recursion Script
-
-This script implements the Floyd-Warshall algorithm using recursion to find the shortest paths in a weighted graph with positive or negative edge weights (but no negative cycles).
-
 ## Installing
 
   To install this project, follow the steps below:
@@ -15,7 +11,7 @@ This script implements the Floyd-Warshall algorithm using recursion to find the 
 1. **Download the latest zip file from this repository**
 2. **Unzip the file into a desired location**
 
-  alternatively using git to clone the repositery.
+  Alternatively using git to clone the repository.
 
   ```sh
   git clone https://github.com/AILearner93/FWMidMod_AssignmentCode
@@ -30,27 +26,28 @@ Before you begin execution make sure you have python 3.X.X installed on your sys
   ```
 
 
-1. **Using your prefrreeerf command line interface (CLI) navigate to the directory where you unzipped or cloned the files from this repository.**
+1. **Using your preferred command line interface (CLI) navigate to the directory where you unzipped or cloned the files from this repository.**
 2. **Install all the required packages for this application.**
 
   ```sh
   pip install -r requirements.txt
   ```
 
-3. ** Run the fw_recursion script**
+3. **Run the fw_recursion script**
 
   ```sh
   python fw_recursion.py
   ```
 
-###Tests:
-  To ensure that the script works correctly and handles edge cases well, you can create a series of tests including but not limited to the following:
+### Tests:
 
-Valid Input Test:
+#### Valid Input Test:
+**Input** : a valid square matrix representing a graph.
 
-Input: a valid square matrix representing a graph.
-Expected Output: an updated matrix with the shortest path distances between all nodes.
-Non-Square Matrix Test:
+**Expected Output** : an updated matrix with the shortest path distances between all nodes.
+
+
+#### Non-Square Matrix Test:
 
 Input: a non-square matrix.
 Expected Output: a ValueError with an appropriate error message.
