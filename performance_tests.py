@@ -42,7 +42,7 @@ def main():
     These matrices are tested through both the recursive and iterative functions 100 times. 
     The results are tabulated in a data frame and output to the CLI.
     """
-    nodeslist = [5, 10, 50, 100]
+    nodeslist = [5, 10, 25, 50, 100]
 
     results = []  # Create a list to be filled with the below values
     for nodes in nodeslist:
