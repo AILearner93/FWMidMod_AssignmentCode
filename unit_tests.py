@@ -1,6 +1,6 @@
 # This code is the unit testing for the Floyd-Warshall algorithm.
 # Import FW_recursion function from the fw_recursion.py file in the same directory.
-from fw_recursion import FW_recursion
+from fw_recursion import fw_recursion
 # Import the Python packages that are required for the test to run.
 import unittest
 import sys
@@ -29,7 +29,7 @@ class TestingFWRecursion(unittest.TestCase):
         ]
         # Assert that the output from the FW_recursion function matches 
         # the known minimum distance graph.
-        self.assertEqual(FW_recursion(graph), known_min_graph)
+        self.assertEqual(fw_recursion(graph), known_min_graph)
 
     # Tests that a non-square matrix as an input will raise a ValueError.
     def test_non_square_matrix(self):
@@ -41,7 +41,7 @@ class TestingFWRecursion(unittest.TestCase):
         ]
         # Assert that a ValueError is raised due to a non-square matrix input.
         with self.assertRaises(ValueError):
-            FW_recursion(graph)
+            fw_recursion(graph)
 
     # Tests that there is a ValueError raised if a negative cycle is present 
     # when computing the minimum distance graph.
@@ -54,7 +54,7 @@ class TestingFWRecursion(unittest.TestCase):
         ]
         # Assert that a ValueError is raised in the presence of negative cycles in the graph.
         with self.assertRaises(ValueError):
-            FW_recursion(graph)
+            fw_recursion(graph)
 
     # Tests that a TypeError is raised when there is an invalid data type; 
     # the code requires integer or float values.
@@ -66,7 +66,7 @@ class TestingFWRecursion(unittest.TestCase):
         ]
         # Assert that a TypeError is raised due to incorrect data type in the graph.
         with self.assertRaises(TypeError):
-            FW_recursion(graph)
+            fw_recursion(graph)
 
 
 # Ensure that the tests are run when the script is executed.

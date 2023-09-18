@@ -4,7 +4,7 @@ both recursive and iterative methods. It leverages NumPy for matrix
 operations and pandas for result presentation.
 """
 
-from fw_recursion import FW_recursion
+from fw_recursion import fw_recursion
 from fw_iteritive import floyd
 import timeit
 import pandas as pd
@@ -48,7 +48,7 @@ def main():
     for nodes in nodeslist:
         matrix = random_matrix(nodes)
 
-        recursive_wrapped = wrapper(FW_recursion, matrix)
+        recursive_wrapped = wrapper(fw_recursion, matrix)
         iterative_wrapped = wrapper(floyd, matrix)
 
         recursive_time = timeit.timeit(recursive_wrapped, number=100)
