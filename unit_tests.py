@@ -1,7 +1,7 @@
 # This code is the unit testing for the Floyd-Warshall algorithm.
 # Import FW_recursion function from the fw_recursion.py file in the same directory.
 from fw_recursion import FW_recursion
-# Import the Python packages that are required for the test to run.
+# Import the Python packages that are required for the test to run correctly.
 import unittest
 import sys
 
